@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Icon/Fill/Check-Circle-Fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="商品中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="发布3" transform="translate(-1046.000000, -404.000000)">
+            <g id="编组-3" transform="translate(810.000000, 398.000000)">
+                <g id="1.通用/2.Icon图标/Fill/Check-Circle-Fill" transform="translate(230.000000, 0.000000)">
+                    <rect id="矩形" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="100" height="100"></rect>
+                    <path d="M50,6.25 C25.8398438,6.25 6.25,25.8398438 6.25,50 C6.25,74.1601562 25.8398438,93.75 50,93.75 C74.1601562,93.75 93.75,74.1601562 93.75,50 C93.75,25.8398438 74.1601562,6.25 50,6.25 Z M68.8964844,35.7128906 L48.3300781,64.2285156 C47.0898438,65.9570312 44.5214844,65.9570312 43.28125,64.2285156 L31.1035156,47.3535156 C30.7324219,46.8359375 31.1035156,46.1132812 31.7382812,46.1132812 L36.3183594,46.1132812 C37.3144531,46.1132812 38.2617187,46.5917969 38.8476562,47.4121094 L45.8007812,57.0605469 L61.1523438,35.7714844 C61.7382812,34.9609375 62.6757812,34.4726562 63.6816406,34.4726562 L68.2617188,34.4726562 C68.8964844,34.4726562 69.2675781,35.1953125 68.8964844,35.7128906 Z" id="形状" fill="#52C41A" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,60 @@
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption,
+  {
+  padding: 0;
+  margin: 0;
+  // 从ExtraLight， Light， DemiLight， Regular， Medium， Bold 到Black
+  // "Source Han Sans SC","Source Han Sans CN"
+  font-family: "PingFang Regular","Source Han Sans SC","Source Han Sans CN","SimSun",宋体,Arial,serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    outline: none;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+}

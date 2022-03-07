@@ -1,0 +1,46 @@
+
+// 单张背景图
+@mixin oneBG($url, $sizeA: auto, $sizeB: null) { 
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: $sizeA $sizeB;
+}
+
+@mixin box {
+  box-sizing: border-box;
+}
+
+@mixin flash ($property: all, $time: 0.3s) {
+  transition: $property $time ease 0s;
+}
+
+// 单行文字
+@mixin oneLine() {
+  display: inline-block;
+  white-space: nowrap; 
+  width: 100%; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+// 两行文字
+@mixin twoLine() {
+  
+}
+
+// flex 布局和 子元素 对其方式
+@mixin flex($type: space-between) {
+  display: flex;
+  justify-content: $type;
+}
+
+// 通用按钮样式 - 待废弃
+@mixin button() {
+  min-width: 80px;
+  height: 32px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-size: 13px;
+  border-radius: 2px;
+}

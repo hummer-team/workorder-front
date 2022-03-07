@@ -1,0 +1,94 @@
+/*** 颜色定义 ***/
+
+$color:           #00a2ff;
+$color-max:       #00a2ff;
+$color-min:       #ffc666;
+$color-back:      #fff6ee;
+
+$color-red:       #e8684a;
+$color-org:       #fbae19;
+$color-blue:      #1890ff;
+$color-green:     #70c437;
+$color-grey:      #dddddd;
+
+$color-font:      #525E71;
+
+$black:           #000000;
+$black-level2:    #202020;
+$black-level3:    #404040;
+$black-level4:    #606060;
+$black-level5:    #808080;
+$black-level6:    #a0a0a0;
+$black-level7:    #c0c0c0;
+$black-level8:    #e0e0e0;
+$black-level9:    #f0f0f0;
+
+/*** 通用元素 ***/
+
+$transition-base: all 0.3s ease;
+
+/*** 侧边栏 ***/
+
+$sider-width:                   240px;
+
+/*** 菜单tab ***/
+
+$header-sub-height:             40px;
+$page-tab-font-size:            13px;
+$page-tab-icon-size:            14px;
+
+/*** 按钮 ***/
+
+$button-border-radius:          2px;
+$button-font-size:              13px;
+$button-min-width:              80px;
+$button-height:                 32px;
+$button-padding:                0 16px;
+
+/*** 表单元素 ***/
+
+$form-item-height:              36px;
+$form-item-margin-vertical:     7px;
+$form-item-append-padding:      0 10px;
+$form-item-border-radius:       2px;
+$form-item-font-size:           14px;
+$form-item-font-color:          #606266;
+$form-label-line-height:        14px;
+$form-label-font-size:          13px;
+$form-label-font-color:         #333333;
+
+$search-form-item-height:       36px;
+
+/*** Table元素 ***/
+
+$table-header-padding:          6px 0;
+$table-header-font-size:        12px;
+$table-header-back-color:       #f9f9f9;
+$table-header-height:           45px;
+$table-header-line-height:      16px;
+$table-header-small-height:     40px;
+$table-header-small-line-height:20px;
+$table-body-padding:            6px 0;
+$table-body-font-size:          13px;
+$table-body-height:             45px;
+$table-body-line-height:        20px;
+$table-body-small-height:       40px;
+$table-body-small-line-height:  20px;
+
+/*** 弹框内元素 -- 可能废弃 ***/
+
+$dialog-form-item-height:       36px;
+
+$dialog-table-header-padding:   6px 0;
+$dialog-table-header-font-size: 12px;
+$dialog-table-body-padding:     6px 0;
+$dialog-table-body-font-size:   13px;
+
+/*** media变量 ***/
+
+$pc-min-width: 1280px;
+
+$tablet-max-width: 1279px;
+$tablet-min-width: 751px;
+
+$mobile-max-width: 750px;

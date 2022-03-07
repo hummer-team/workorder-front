@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Icon/Checkbox-Selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="文件管理" transform="translate(-800.000000, -263.000000)">
+            <g id="Icon/Checkbox-Selected" transform="translate(800.000000, 263.000000)">
+                <g id="save"></g>
+                <rect id="矩形" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="16" height="16"></rect>
+                <rect id="Rectangle-271" fill="#FFB600" x="0" y="0" width="16" height="16"></rect>
+                <path d="M11.7702533,5.254 L7.55825331,11.094 C7.30425331,11.448 6.77825331,11.448 6.52425331,11.094 L4.03025331,7.638 C3.95425331,7.532 4.03025331,7.384 4.16025331,7.384 L5.09825331,7.384 C5.30225331,7.384 5.49625331,7.482 5.61625331,7.65 L7.04025331,9.626 L10.1842533,5.266 C10.3042533,5.1 10.4962533,5 10.7022533,5 L11.6402533,5 C11.7702533,5 11.8462533,5.148 11.7702533,5.254 Z" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

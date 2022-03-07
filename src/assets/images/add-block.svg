@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <g id="内容管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="内容管理编辑页-tab-bar" transform="translate(-1591.000000, -517.000000)">
+            <g id="编组-23" transform="translate(1400.000000, 270.000000)">
+                <g id="编组备份-2" transform="translate(25.000000, 243.000000)">
+                    <g id="Group-11" transform="translate(166.000000, 4.000000)">
+                        <rect id="矩形" fill="#F5F5F5" x="0" y="0" width="36" height="36"></rect>
+                        <g id="新建" transform="translate(12.000000, 13.000000)" fill-rule="nonzero">
+                            <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="12" height="12"></rect>
+                            <path d="M11.4,5.4 L0.6,5.4 C0.27,5.4 0,5.67 0,6 C0,6.33 0.27,6.6 0.6,6.6 L11.4,6.6 C11.73,6.6 12,6.33 12,6 C12,5.67 11.73,5.4 11.4,5.4 Z" id="路径" fill="#999999"></path>
+                            <path d="M6,0 C5.67,0 5.4,0.27 5.4,0.6 L5.4,11.4 C5.4,11.73 5.67,12 6,12 C6.33,12 6.6,11.73 6.6,11.4 L6.6,0.6 C6.6,0.27 6.33,0 6,0 Z" id="路径" fill="#999999"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
