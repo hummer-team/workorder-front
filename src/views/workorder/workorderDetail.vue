@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
   name: 'workorderDetail',
   data() {
@@ -61,9 +60,9 @@ export default {
         { label: '工单规范说明', type: 'tooltip', field: 'describe' }
       ],
       formButtonList: [
-        { label: '保存', type: 'primary', function: this.createWorkorder, isShow: () => this.pageType === 'create', float: 'left', icon: 'circle-check' },
-        { label: '保存', type: 'primary', function: this.updateWorkorder, isShow: () => this.pageType === 'update' && this.formData.status !== 1010, float: 'left', icon: 'circle-check' },
-        { label: '重新发起', type: 'primary', function: this.createWorkorder, isShow: () => this.pageType === 'update' && this.formData.status === 1010, float: 'left', icon: 'circle-check' }
+        { label: '保存', type: 'primary', function: this.createWorkorder, isShow: () => this.pageType === 'create', float: 'left', icon: 'circle-check', loading: () => this.formLoading },
+        { label: '保存', type: 'primary', function: this.updateWorkorder, isShow: () => this.pageType === 'update' && this.formData.status !== 1010, float: 'left', icon: 'circle-check', loading: () => this.formLoading },
+        { label: '重新发起', type: 'primary', function: this.createWorkorder, isShow: () => this.pageType === 'update' && this.formData.status === 1010, float: 'left', icon: 'circle-check', loading: () => this.formLoading }
       ],
       categories: [],
       tags: [],
@@ -114,29 +113,32 @@ export default {
     createWorkorder: async function () {
       const valid = await this.$refs['config-form'].validateForm()
       if (!valid) return
+      this.formLoading = true
       const data = this.setFormData(this.formData)
 
       await this.$api.query(this.$api.workorder.new, { data }).then(({ res }) => {
         if (res.code === 0) {
           this.success('创建成功')
+          this.formLoading = false
           this.menuTurn({ code: 'workorderDetail', query: { id: res.data, pageType: 'update' } })
         }
       }, this.apiHandleError)
+      this.formLoading = false
     },
     updateWorkorder: async function () {
       const valid = await this.$refs['config-form'].validateForm()
       if (!valid) return
+      this.formLoading = true
       const data = this.setFormData(this.formData)
 
       await this.$api.query(this.$api.workorder.edit, { data }).then(({ res }) => {
         if (res.code === 0) {
           this.success('更新成功')
+          this.formLoading = false
           this.getWorkorderDetail()
-          // this.formData = res.data
-        } else {
-          this.error(res.message)
         }
       }, this.apiHandleError)
+      this.formLoading = false
     },
     getTemplates: async function () {
       await this.$api.query(this.$api.template.templateList).then(({ res }) => {

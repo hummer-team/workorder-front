@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-box>
-      <default-form ref="search-form" form-type="search" :form-data="formData" :form-items="formItems" :form-button-list="formButtonList" :btnWrapStyle="btnWrapStyle"></default-form>
+      <default-form ref="search-form" form-type="search" :form-data="formData" :form-items="formItems" :form-button-list="formButtonList" :btnWrapStyle="btnWrapStyle" :form-style="formStyle"></default-form>
     </page-box>
     <page-box :is-full="true">
       <default-table :loading="searchLoading" :table-data="tableData" :table-items="tableItems" :table-page="tablePage" :table-button-list="tableButtonList" @get-data-list="getWorkorderList" :showSerialNumber="true"></default-table>
@@ -34,7 +34,10 @@ export default {
       baseExtendTag: true,
       nodeExtendTag: true,
       btnWrapStyle: {
-        wrapSpan: 8
+        wrapSpan: 6
+      },
+      formStyle: {
+        labelWidth: 49
       },
       formData: {
       },
@@ -47,8 +50,10 @@ export default {
         { name: '已取消', code: 5000 }
       ],
       formItems: [
-        { label: '起止时间', type: 'date-picker', field: 'createTime', pickType: 'datetimerange', format: 'yyyy-MM-dd HH:mm', valueFormat: 'yyyy-MM-dd HH:mm:ss', defaultTime: ['00:00:00', '23:59:59'], validate: { isRequired: true } },
-        { label: '状态', type: 'select', field: 'status', options: () => this.statusOptions }
+        { label: '时间', type: 'date-picker', field: 'createTime', pickType: 'datetimerange', format: 'yyyy-MM-dd HH:mm', valueFormat: 'yyyy-MM-dd HH:mm:ss', defaultTime: ['00:00:00', '23:59:59'], validate: { isRequired: true }, span: 6 },
+        { label: '状态', type: 'select', field: 'status', options: () => this.statusOptions, span: 4 },
+        { label: '类型', type: 'select', field: 'templateId', options: () => this.templates, span: 4 },
+        { label: '名称', field: 'workOrderName', span: 4 }
       ],
       tableData: [],
       tableItems: [
@@ -122,7 +127,8 @@ export default {
           { label: '关闭', function: this.closeReasonDialog },
           { label: '确定', type: 'primary', function: this.submitReasonForm },
         ]
-      }
+      },
+      templates: []
     }
   },
   computed: {
@@ -151,6 +157,7 @@ export default {
       })
     },
     initData: async function () {
+      this.getTemplates()
       const now = new Date()
       const nowTime = now.getTime()
       const past = new Date(nowTime - 30 * 24 * 60 * 60 * 1000)
@@ -167,7 +174,9 @@ export default {
         data.queryObject = {
           beginDate: data.createTime[0],
           endDate: data.createTime[1],
-          status: data.status || 0
+          status: data.status || 0,
+          templateId: data.templateId || 0,
+          workOrderName: data.workOrderName || null
         }
       }
       this.$refs['search-form'].saveSearchData(data)
@@ -302,6 +311,18 @@ export default {
           }
         }, this.apiHandleError)
       }
+    },
+    getTemplates: async function () {
+      await this.$api.query(this.$api.template.templateList).then(({ res }) => {
+        if (this.checkApiSuccess(res)) {
+          this.templates = res.data.map(item => {
+            return {
+              code: item.id,
+              name: item.name,
+            }
+          })
+        }
+      }, this.apiHandleError)
     }
   },
   created () {
