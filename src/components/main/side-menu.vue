@@ -45,7 +45,7 @@ export default {
       menuSelectCode: '',
       menuTree: [
         {
-          child: [{ code: 'workorderDetail', name: '创建工单', type: 1, isShow: '1', roles: [0, 3] }, { code: 'workorderDetail', name: '工单详情', type: 1, isShow: '0' }, { code: 'workorderList', name: '工单列表', type: 1, isShow: '1', roles: [0, 1, 2, 3, 4] }, { code: 'pendingApprovalWorkorderList', name: '待审批工单列表', type: 1, isShow: '1', roles: [0, 1, 3] }, { code: 'pendingExecuteWorkorderList', name: '待执行工单列表', type: 1, isShow: '1', roles: [0, 2, 3] }],
+          child: [{ code: 'workorderDetail', name: '创建工单', type: 1, isShow: '1', roles: [0, 3] }, { code: 'workorderDetail', name: '工单详情', type: 1, isShow: '0' }, { code: 'workorderList', name: '工单列表', type: 1, isShow: '1', roles: [0, 1, 2, 3, 4] }, { code: 'pendingApprovalWorkorderList', name: '待审批工单', type: 1, isShow: '1', roles: [0, 1, 3] }, { code: 'pendingExecuteWorkorderList', name: '待执行工单', type: 1, isShow: '1', roles: [0, 2, 3] }],
           code: 'workorderManagement',
           isShow: '1',
           type: 1,

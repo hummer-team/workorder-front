@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-box>
-      <default-form ref="search-form" form-type="search" :form-data="formData" :form-items="formItems" :form-button-list="formButtonList" :btnWrapStyle="btnWrapStyle"></default-form>
+      <default-form ref="search-form" form-type="search" :form-data="formData" :form-items="formItems" :form-button-list="formButtonList" :btnWrapStyle="btnWrapStyle" :form-style="formStyle"></default-form>
     </page-box>
     <page-box :is-full="true">
       <default-table :loading="searchLoading" :table-data="tableData" :table-items="tableItems" :table-page="tablePage" :table-button-list="tableButtonList" @get-data-list="getWorkorderList" :showSerialNumber="true"></default-table>
@@ -34,7 +34,10 @@ export default {
       baseExtendTag: true,
       nodeExtendTag: true,
       btnWrapStyle: {
-        wrapSpan: 8
+        wrapSpan: 6
+      },
+      formStyle: {
+        labelWidth: 49
       },
       formData: {
         status: 2000
