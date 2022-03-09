@@ -11,7 +11,7 @@
       <transition-box :show-tag="baseExtendTag">
         <default-form ref="base-form" :form-data="dialog.formData" :form-items="dialog.formItems"></default-form>
       </transition-box>
-      <page-box-title title="处理节点" :is-extend="true" :extend-tag="nodeExtendTag" :onClickTag="() => onClickTag('nodeExtendTag')" :is-bold="true"></page-box-title>
+      <page-box-title title="处理节点" :is-extend="true" :extend-tag="nodeExtendTag" :onClickTag="() => onClickTag('nodeExtendTag')" :is-bold="true" :info="true"></page-box-title>
       <transition-box :show-tag="nodeExtendTag">
         <default-timeline class="timeline" :logs="dialog.formData.logs" timestamp-field="timestamp"></default-timeline>
       </transition-box>
@@ -101,7 +101,8 @@ export default {
           { label: '标题', field: 'title', type: 'text', size: 3, disabled: true },
           { label: '环境', field: 'environment', type: 'text', size: 3, disabled: true },
           { label: '期望执行时间', field: 'expectDatetime', type: 'text', size: 3, disabled: true },
-          { label: '工单内容', type: 'rich-text', field: 'content', size: 3, disabled: () => true }
+          { label: '工单内容', type: 'rich-text', field: 'content', size: 3, disabled: () => true },
+          { label: '工单规范说明', type: 'tooltip', field: 'describe', size: 3 }
         ],
         tableItems: [
           { label: '状态', field: 'statusDes' },

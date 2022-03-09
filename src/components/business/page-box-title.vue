@@ -5,7 +5,12 @@
 <template>
   <div class="page-box-title" :class="isBold ? 'is-bold-box' : ''">
     <!-- 标题 -->
-    <div v-if="title" class="title" :class="isBold ? 'is-bold' : ''">{{title}}</div>
+    <div v-if="title" class="title" :class="isBold ? 'is-bold' : ''">
+      {{title}}
+      <el-tooltip v-if="info" class="item" effect="dark" content="工单审批或执行操作参考工单规范说明" placement="top-start">
+        <i class="el-icon-info"></i>
+      </el-tooltip>
+    </div>
     <div v-if="isExtend" class="extend-wrap" @click="onClickExtend">
       <span v-if="extendTag">收起</span>
       <span v-else>展开</span>
@@ -37,7 +42,9 @@ export default {
     // 点击标识方法
     onClickTag: { type: Function, default: null },
     // 是否加粗
-    isBold: { type: Boolean, default: false }
+    isBold: { type: Boolean, default: false },
+    // 是否有信息
+    info: { type: Boolean, default: false }
   },
   watch:{
 
